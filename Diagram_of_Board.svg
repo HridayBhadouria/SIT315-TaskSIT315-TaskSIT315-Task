@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#ffffff"/>
+  <style>
+    .title { font: 700 42px Arial, sans-serif; fill: #111827; }
+    .subtitle { font: 24px Arial, sans-serif; fill: #374151; }
+    .boxTitle { font: 700 27px Arial, sans-serif; fill: #ffffff; }
+    .label { font: 600 23px Arial, sans-serif; fill: #111827; }
+    .small { font: 21px Arial, sans-serif; fill: #1f2937; }
+    .pin { font: 700 20px Arial, sans-serif; fill: #ffffff; }
+    .note { font: 19px Arial, sans-serif; fill: #4b5563; }
+  </style>
+  <text x="800" y="65" text-anchor="middle" class="title">SIT315 M1 Board Connection Diagram</text>
+  <text x="800" y="102" text-anchor="middle" class="subtitle">Arduino Nano 33 IoT current working setup</text>
+
+  <rect x="555" y="180" width="490" height="590" rx="25" fill="#163b65"/>
+  <text x="800" y="235" text-anchor="middle" class="boxTitle">Arduino Nano 33 IoT</text>
+  <text x="800" y="270" text-anchor="middle" class="note" fill="#dbeafe">Connect every sensor ground to Arduino GND</text>
+
+  <rect x="590" y="315" width="140" height="44" rx="7" fill="#ef4444"/><text x="660" y="345" text-anchor="middle" class="pin">5V</text>
+  <rect x="870" y="315" width="140" height="44" rx="7" fill="#111827"/><text x="940" y="345" text-anchor="middle" class="pin">GND</text>
+  <rect x="590" y="400" width="140" height="44" rx="7" fill="#9333ea"/><text x="660" y="430" text-anchor="middle" class="pin">D9 PIR</text>
+  <rect x="870" y="400" width="140" height="44" rx="7" fill="#f97316"/><text x="940" y="430" text-anchor="middle" class="pin">D4 DHT</text>
+  <rect x="590" y="485" width="140" height="44" rx="7" fill="#facc15"/><text x="660" y="515" text-anchor="middle" class="pin">D6 LED</text>
+  <rect x="870" y="485" width="140" height="44" rx="7" fill="#06b6d4"/><text x="940" y="515" text-anchor="middle" class="pin">A4 SDA</text>
+  <rect x="870" y="555" width="140" height="44" rx="7" fill="#0ea5e9"/><text x="940" y="585" text-anchor="middle" class="pin">A5 SCL</text>
+  <rect x="590" y="625" width="140" height="44" rx="7" fill="#f59e0b"/><text x="660" y="655" text-anchor="middle" class="pin">3.3V</text>
+
+  <rect x="80" y="245" width="330" height="210" rx="18" fill="#ede9fe" stroke="#7c3aed" stroke-width="4"/>
+  <text x="245" y="290" text-anchor="middle" class="label">PIR motion sensor</text>
+  <text x="115" y="335" class="small">VCC to 3.3V</text>
+  <text x="115" y="372" class="small">GND to GND</text>
+  <text x="115" y="409" class="small">OUT to D9</text>
+  <path d="M410 400 H590" stroke="#9333ea" stroke-width="7" fill="none"/>
+  <path d="M410 335 H520 V647 H590" stroke="#f59e0b" stroke-width="7" fill="none"/>
+  <path d="M410 372 H500 V337 H870" stroke="#111827" stroke-width="7" fill="none"/>
+
+  <rect x="90" y="585" width="320" height="200" rx="18" fill="#fee2e2" stroke="#ef4444" stroke-width="4"/>
+  <text x="250" y="630" text-anchor="middle" class="label">DHT22 sensor</text>
+  <text x="125" y="675" class="small">VCC to 5V</text>
+  <text x="125" y="712" class="small">DATA to D4</text>
+  <text x="125" y="749" class="small">GND to GND</text>
+  <path d="M410 674 H510 V337 H590" stroke="#ef4444" stroke-width="7" fill="none"/>
+  <path d="M410 711 H500 V422 H870" stroke="#f97316" stroke-width="7" fill="none"/>
+  <path d="M410 748 H480 V337 H870" stroke="#111827" stroke-width="7" fill="none"/>
+
+  <rect x="1190" y="245" width="330" height="230" rx="18" fill="#cffafe" stroke="#0891b2" stroke-width="4"/>
+  <text x="1355" y="290" text-anchor="middle" class="label">BH1750 light sensor</text>
+  <text x="1225" y="335" class="small">VCC to 3.3V</text>
+  <text x="1225" y="372" class="small">GND to GND</text>
+  <text x="1225" y="409" class="small">SDA to A4</text>
+  <text x="1225" y="446" class="small">SCL to A5</text>
+  <path d="M1010 647 H1110 V335 H1190" stroke="#f59e0b" stroke-width="7" fill="none"/>
+  <path d="M1010 337 H1125 V372 H1190" stroke="#111827" stroke-width="7" fill="none"/>
+  <path d="M1010 507 H1100 V409 H1190" stroke="#06b6d4" stroke-width="7" fill="none"/>
+  <path d="M1010 577 H1125 V446 H1190" stroke="#0ea5e9" stroke-width="7" fill="none"/>
+
+  <rect x="1190" y="615" width="330" height="170" rx="18" fill="#fef3c7" stroke="#f59e0b" stroke-width="4"/>
+  <text x="1355" y="660" text-anchor="middle" class="label">LED and resistor</text>
+  <text x="1225" y="705" class="small">D6 to resistor then LED positive</text>
+  <text x="1225" y="742" class="small">LED negative to GND</text>
+  <path d="M730 507 H1130 V705 H1190" stroke="#facc15" stroke-width="7" fill="none"/>
+  <path d="M1010 337 H1140 V742 H1190" stroke="#111827" stroke-width="7" fill="none"/>
+
+  <text x="800" y="930" text-anchor="middle" class="note">Power: PIR and BH1750 use 3.3V. DHT22 uses 5V. All components use a shared GND.</text>
+</svg>
